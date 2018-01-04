@@ -1,0 +1,30 @@
+{
+  "name": "fabric_1_0",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "http": {
+    "path": "fabric/1_0"
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "permission": "DENY",
+      "principalId": "$unauthenticated",
+      "principalType": "ROLE"
+    },
+    {
+      "accessType": "*",
+      "permission": "ALLOW",
+      "principalId": "$authenticated",
+      "principalType": "ROLE"
+    }
+  ],
+  "methods": {},
+  "hidden": ["id"]
+}
